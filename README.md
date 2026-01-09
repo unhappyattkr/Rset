@@ -8,5 +8,5 @@
 <br>
 <img width="242" height="100" alt="image" src="https://github.com/user-attachments/assets/2d878ff9-d2a1-40fc-acd6-8a3815b51178" />
 <img width="240" height="100" alt="image" src="https://github.com/user-attachments/assets/9d28b7ae-79e5-449a-848d-dad8bae8bc57" />
-<img width="242" height="102" alt="image" src="https://github.com/user-attachments/assets/ce0330d4-224d-413b-9718-419a4c039272" />
+<img width="242" height="102" alt="image" src="https://github.com/user-attachments/assets/ce0330d4-224d-413b-9718-419a4c039272" /><br>
 With the release binaries you can begin utilizing the utility almost immediately. No assembly needed.
