@@ -15,3 +15,10 @@ With the release binaries you can begin utilizing the utility almost immediately
 * Simply download the binary from the releases and run it anywhere to start the application. 
 * Make sure DayZ is in windowed mode if you want the app to overlay.
 * In the settings page ([+] button), you can toggle notification beeps, and the classic mode for the progress bar in the theme of the alpha version of the utility.
+
+
+## **Nerd stuff**
+[Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
+<img width="1722" height="633" alt="image" src="https://github.com/user-attachments/assets/212e63dd-860e-4977-9518-a2c85f558bff" />
+[Virus total](https://www.virustotal.com/gui/file/8b7268419432c6e68e04ef1744ee4dc59d02ec724bf6e03710c9eb9a16e142bf)<br>
+<img width="656" height="1089" alt="image" src="https://github.com/user-attachments/assets/ff0af1d0-9add-42b0-a146-7966f0ad218b" />
