@@ -19,13 +19,15 @@ With the release binaries you can begin utilizing the utility almost immediately
 # **Nerd stuff**
 <br><br><br>
 ## **Building from source**
-  Install Python version 3.11<br>
-  Install the required dependencies with ```py/python -m pip install pyinstaller```<br><br>
-  Make sure to install dependencies to the correct version if you have multiple python versions. ```py/python -3.11 -m pip install pyinstaller```<br><br>
-  Compile using PyInstaller,     (Replace "PATH_TO" with the corresponding path, and enter only 'py' or 'python', not 'py/python')<br>
-   * eg. ```py/python -3.11 C:\PATH_TO\Python\Python311\Lib\site-packages\PyInstaller\__main__.py  --noconsole --onefile --collect-all imgui --add-binary "C:\PATH_TO\Python\Python311\Lib\site-packages\glfw\glfw3.dll;." C:\PATH_TO\Rset.py```
+Install Python version 3.11<br>
+Install the required dependencies with<br>
+```py/python -m pip install pyinstaller```<br><br>
+Make sure to install dependencies to the correct version if you have multiple python versions.<br> > ```py/python -3.11 -m pip install pyinstaller```<br><br>
+Compile using PyInstaller,<br>
+> (Replace "PATH_TO" with the corresponding path, and enter only 'py' or 'python', not 'py/python')<br><br>
+> eg. ```py/python -3.11 C:\PATH_TO\Python\Python311\Lib\site-packages\PyInstaller\__main__.py  --noconsole --onefile --collect-all imgui --add-binary "C:\PATH_TO\Python\Python311\Lib\site-packages\glfw\glfw3.dll;." C:\PATH_TO\Rset.py```
 <br><br>
-## **Binary Virus Total + Analysis**
+## **Release Binary Virus Total + Analysis**
 [Detect It Easy](https://github.com/horsicq/Detect-It-Easy)
 <img width="1723" height="599" alt="image" src="https://github.com/user-attachments/assets/3813475a-404e-4903-a650-3aefdaefbc0e" />
 [Virus total](https://www.virustotal.com/gui/file/8b7268419432c6e68e04ef1744ee4dc59d02ec724bf6e03710c9eb9a16e142bf)<br>
