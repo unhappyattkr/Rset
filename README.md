@@ -15,7 +15,7 @@ With the release binaries you can begin utilizing the utility almost immediately
 * Simply download the binary from the releases and run it anywhere to start the application. 
 * Make sure DayZ is in windowed mode if you want the app to overlay.
 * In the settings page ([+] button), you can toggle notification beeps, and the classic mode for the progress bar in the theme of the alpha version of the utility.
-<br><br><br><br><br><br><br>
+<br><br><br><br><br>
 # **Nerd stuff**
 <br><br><br>
 ## **Building from source**
