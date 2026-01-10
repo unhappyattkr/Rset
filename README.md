@@ -1,4 +1,5 @@
 # Rset
+(updates discontinued permentantly, if you want to get past the endless queue, play a different server, trust me.)
 ## **Never** lose a prized vehicle to a server restart again. 
  This lightweight utility tracks server restart times with high precision,<br>  enabling you to secure your gear before the restart, <br>  and ensuring you are the first one in the queue.
 <br><br>**Designed in-time with, and for, the _Escape from Dayz_ by Goon DayZ server.**
