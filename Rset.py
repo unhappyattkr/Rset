@@ -3,7 +3,6 @@
 # made by .c.o.r.a
 # for Python version - 3.11
 
-
 #   Copyright © 2026 .c.o.r.a
 
 #    This program is free software: you can redistribute it and/or modify
@@ -19,16 +18,14 @@
 #    You should have received a copy of the GNU General Public License
 #    along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-
 import datetime
 import imgui
 from imgui.integrations.glfw import GlfwRenderer
 import glfw
 import OpenGL.GL as gl
-import numpy as np
-import sounddevice as sd
 import time
 import os
+import numpy as np
 
 # Config
 DEBUG = False
@@ -238,10 +235,29 @@ def main():
 
         imgui.same_line(position=DEFAULT_WIDTH - 50)
         imgui.push_style_color(imgui.COLOR_BUTTON, *RED)
-        imgui.push_style_color(imgui.COLOR_TEXT, *BLACK) 
-        if imgui.button("_", width=18, height=18): glfw.iconify_window(window)
-        imgui.same_line(); 
-        if imgui.button("x", width=18, height=18): glfw.set_window_should_close(window, True)
+        imgui.push_style_color(imgui.COLOR_TEXT, 0, 0, 0, 0) # Hide default text
+        
+        # Save screen positions for custom text drawing
+        min_pos = imgui.get_cursor_screen_pos()
+        if imgui.button("##min", width=18, height=18): glfw.iconify_window(window)
+        
+        imgui.same_line()
+        close_pos = imgui.get_cursor_screen_pos()
+        if imgui.button("##close", width=18, height=18): glfw.set_window_should_close(window, True)
+        
+        # Draw custom text elements
+        draw_list = imgui.get_window_draw_list()
+        text_color = imgui.get_color_u32_rgba(*BLACK)
+        
+        if classic_font_small: imgui.push_font(classic_font_small)
+        imgui.set_window_font_scale(1.8)
+        
+        draw_list.add_text(min_pos[0] + 5, min_pos[1] - 1.5, text_color, "_")
+        draw_list.add_text(close_pos[0] + 5, close_pos[1] + 1, text_color, "x")
+        
+        imgui.set_window_font_scale(1.0)
+        if classic_font_small: imgui.pop_font()
+        
         imgui.pop_style_color(2) 
 
         imgui.separator()
@@ -279,12 +295,14 @@ def main():
             imgui.push_style_color(imgui.COLOR_CHECK_MARK, r, g, b, 1.0)
             imgui.push_style_color(imgui.COLOR_FRAME_BACKGROUND_HOVERED, r, g, b, 0.4)
             imgui.push_style_color(imgui.COLOR_FRAME_BACKGROUND_ACTIVE, r, g, b, 0.6)
-            
+            imgui.push_style_color(imgui.COLOR_SLIDER_GRAB, r, g, b, 0.8)
+            imgui.push_style_color(imgui.COLOR_SLIDER_GRAB_ACTIVE, r, g, b, 1.0)
+
             _, audioBool = imgui.checkbox("beep", audioBool)
             if DEBUG:
                 imgui.same_line()
             _, classicMode = imgui.checkbox("classic", classicMode)
-            
+
             if DEBUG:
                 _, forceStage = imgui.checkbox("force", forceStage)
                 imgui.same_line()
@@ -292,7 +310,7 @@ def main():
                 _, phaseID = imgui.slider_int("##stage_slider", phaseID, 1, 3)
                 imgui.pop_item_width()
             
-            imgui.pop_style_color(4)
+            imgui.pop_style_color(6)
 
         btn_size = 16
         pos_x = DEFAULT_WIDTH - 22
@@ -308,7 +326,7 @@ def main():
             show_settings = not show_settings
 
         # button transform
-        off_x = 2
+        off_x = 1
         off_y = -5
 
         # button text scale
@@ -317,7 +335,7 @@ def main():
         draw_list.add_text(
             pos_x + off_x, 
             pos_y + off_y, 
-            imgui.get_color_u32_rgba(0.3, 0.3, 0.3, 1.0), 
+            imgui.get_color_u32_rgba(0, 0, 0, 1.0), 
             "+"
         )
         imgui.set_window_font_scale(1.0) 
@@ -340,6 +358,5 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
 #   Copyright © 2026 .c.o.r.a
